@@ -1,0 +1,17 @@
+{% extends "layout/layout.html" %}    <!--telling app that which template to use ----- Ya ye inject kahan krna code blocks-->
+
+<!-- This is the title block which is defined in the base.html file -->
+{% block title %} 
+    Home
+{% endblock %}
+
+{% comment %} {% block styling %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %} {% endcomment %}
+
+
+{% block content %} <!-- This is the content block which is defined in the base.html file -->
+    <h1>Welcome to Django Ka Gayaan    |    Home Page</h1>
+    <h2>Learn Django with us Wajahat</h2>
+
+{% endblock %}

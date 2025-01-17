@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">    <!-- This is used to load the css file -->
-    <title>Django Application</title>
+    <title>{% block title %}Django Application{% endblock %} </title>
 </head>
 <body>
-    <h1>Hello, Lo g Django v use kr li</h1>
+    <nav>Yeh bhai navbar hai</nav>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
 </body>
 </html>
