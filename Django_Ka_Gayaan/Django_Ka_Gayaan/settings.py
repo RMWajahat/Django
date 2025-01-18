@@ -40,7 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'first_app', # added the first_app to the list of installed apps
+    'tailwind', # added the tailwind to the list of installed apps
+    'theme_app', # added the theme_app to the list of installed apps
+    'django_browser_reload', # added the django_browser_reload for Hot Reload feature as Django does not have Hot Reload feature by default
 ]
+
+TAILWIND_APP_NAME = 'theme_app'
+
+INTERNAL_IPS = ['127.0.0.1']
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     "django_browser_reload.middleware.BrowserReloadMiddleware", # added the BrowserReloadMiddleware for Hot Reload
 ]
 
 ROOT_URLCONF = 'Django_Ka_Gayaan.urls'

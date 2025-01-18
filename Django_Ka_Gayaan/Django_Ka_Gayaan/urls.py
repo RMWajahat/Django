@@ -22,4 +22,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('categories/', include('first_app.urls')), # This will include urls from first_app
+
+
+
+
+
+
+    # For Hot Reload  - Add at the end of the urls for better distinction
+    path("__reload__/", include("django_browser_reload.urls")), # This will include urls for Hot Reload
 ]
