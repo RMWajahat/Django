@@ -16,18 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include # Added include here which will add sub-urls from other apps
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('categories/', include('first_app.urls')), # This will include urls from first_app
+    path('categories/', include('first_app.urls')), # This will include urls from first_app 
 
 
-
-
-
-
+    
     # For Hot Reload  - Add at the end of the urls for better distinction
     path("__reload__/", include("django_browser_reload.urls")), # This will include urls for Hot Reload
-]
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # This will serve media files in development mode

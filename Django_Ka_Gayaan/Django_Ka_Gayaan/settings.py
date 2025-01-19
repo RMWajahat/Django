@@ -93,6 +93,10 @@ DATABASES = {
     }
 }
 
+MEDIA_URL = '/media/'     # yeh change nahin kr skta---- Framework ka rule hai 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # yeh change nahin kr skta---- Framework ka rule hai 
+# yaha pe hum media ko store krna chahte hai
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -11,7 +11,29 @@
 
 
 {% block content %} <!-- This is the content block which is defined in the base.html file -->
-    <h1 class="text-3xl bg-red-700">Welcome to Django Ka Gayaan    |    Home Page</h1>
-    <h2>Learn Django with us Wajahat</h2>
+    <h1 class="text-3xl bg-orange-500 py-3">Welcome to Django Ka Gayaan    |    Home Page</h1>
+    <h2>Couses  | Using for looping</h2>
+
+    <div class="grid grid-cols-3 gap-4 m-4">
+        {% for category in categories%}
+    <div class="bg-gray-200 p-2 rounded" >
+                <div >
+                    <img src="{{category.image.url}}" alt="" srcset="">
+
+                {% if category.image2 %}
+                    <img src="{{category.image2.url}}" alt="" srcset="">
+                {% endif %}
+                </div>
+                <h1 class="text-left text-xl text-slate-900">{{category.name}}</h1>
+                <h1 class="text-left text-sm text-slate-700" >{{category.category }} - {{category.date_added.date}}</h1>
+
+                {% if category.price %}
+                    <p class="text-left text-slate-800 text-2xl font-bold text-slate-800">$ {{category.price}}</p>
+                {% endif %}
+                
+                
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
