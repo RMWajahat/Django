@@ -12,5 +12,5 @@ def all_categories(request):
 
 
 def per_course(request, courseid):
-    course = get_object_or_404(Course_Category, pk=courseid)
+    course = get_object_or_404(Course_Category, pk = courseid)
     return render(request, 'website/per_course.html', {'course': course})

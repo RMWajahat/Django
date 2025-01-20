@@ -1,0 +1,26 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}
+Course  - {{course.name}}
+{% endblock %}
+
+
+{% block content %} <!-- This is the content block which is defined in the base.html file -->
+<div >
+    <img src="{{course.image.url}}" alt="" srcset="">
+
+{% if course.image2 %}
+    <img src="{{course.image2.url}}" alt="" srcset="">
+{% endif %}
+</div>
+<h1 class="text-left text-xl text-slate-900">{{course.name}}</h1>
+<h1 class="text-left text-sm text-slate-700" >{{course.course }} - {{course.date_added.date}}</h1>
+
+{% if course.price %}
+    <p class="text-left text-slate-800 text-2xl font-bold text-slate-800">$ {{course.price}}</p>
+{% endif %}
+
+
+</div>
+
+{% endblock %}
