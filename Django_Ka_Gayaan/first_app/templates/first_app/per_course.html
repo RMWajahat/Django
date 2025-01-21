@@ -1,12 +1,12 @@
 {% extends "layout/layout.html" %}
 
 {% block title %}
-Course  - {{course.name}}
+Course 
 {% endblock %}
 
 
 {% block content %} <!-- This is the content block which is defined in the base.html file -->
-<div >
+{% comment %} <div >
     <img src="{{course.image.url}}" alt="" srcset="">
 
 {% if course.image2 %}
@@ -21,6 +21,11 @@ Course  - {{course.name}}
 {% endif %}
 
 
+</div> {% endcomment %}
+
+<div class="w-[80vw] mx-auto">
+<div>On course page - {{course.id}}</div>
+<h1 class="text-left text-xl font-bold text-slate-200">{{course.name}}</h1>
 </div>
 
 {% endblock %}

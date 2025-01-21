@@ -30,6 +30,8 @@
                 {% if category.price %}
                     <p class="text-left text-slate-800 text-2xl font-bold text-slate-800">$ {{category.price}}</p>
                 {% endif %}
+
+                <a href="{% url 'course_id' category.id%}" class="bg-slate-900 w-full px-20 -my-2 py-3 rounded">View Course</a>
                 
                 
             </div>
